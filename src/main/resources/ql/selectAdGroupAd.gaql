@@ -1,0 +1,37 @@
+SELECT
+  ad_group_ad.ad.resource_name,
+  ad_group_ad.ad.final_urls,
+  ad_group_ad.ad.display_url,
+  ad_group_ad.ad.responsive_display_ad.accent_color,
+  ad_group_ad.ad.responsive_display_ad.allow_flexible_color,
+  ad_group_ad.ad.responsive_display_ad.business_name,
+  ad_group_ad.ad.responsive_display_ad.call_to_action_text,
+  ad_group_ad.ad.responsive_display_ad.control_spec.enable_asset_enhancements,
+  ad_group_ad.ad.responsive_display_ad.control_spec.enable_autogen_video,
+  ad_group_ad.ad.responsive_display_ad.descriptions,
+  ad_group_ad.ad.responsive_display_ad.format_setting,
+  ad_group_ad.ad.responsive_display_ad.headlines,
+  ad_group_ad.ad.responsive_display_ad.logo_images,
+  ad_group_ad.ad.responsive_display_ad.long_headline,
+  ad_group_ad.ad.responsive_display_ad.main_color,
+  ad_group_ad.ad.responsive_display_ad.marketing_images,
+  ad_group_ad.ad.responsive_display_ad.price_prefix,
+  ad_group_ad.ad.responsive_display_ad.promo_text,
+  ad_group_ad.ad.responsive_display_ad.square_logo_images,
+  ad_group_ad.ad.responsive_display_ad.square_marketing_images,
+  ad_group_ad.ad.responsive_display_ad.youtube_videos,
+  ad_group_ad.ad.responsive_search_ad.descriptions,
+  ad_group_ad.ad.responsive_search_ad.headlines,
+  ad_group_ad.ad.responsive_search_ad.path1,
+  ad_group_ad.ad.responsive_search_ad.path2,
+  campaign.name,
+  ad_group.name,
+  ad_group_ad.ad.type,
+  campaign.resource_name,
+  ad_group_ad.status
+FROM ad_group_ad
+WHERE
+  ad_group_ad.ad.type = 'RESPONSIVE_DISPLAY_AD'
+  AND ad_group_ad.status != 'REMOVED'
+  AND campaign.status != 'REMOVED'
+  AND ad_group.status != 'REMOVED'

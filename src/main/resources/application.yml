@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    charset: utf-8
+    cache: false
+    template-loader-path: classpath:/templates/
+
+
+# App settings
+api:
+  google:
+    clientId: 166991594563-m3ck7jtsun6r52qd9ajf1p71on27fo24.apps.googleusercontent.com
+    clientSecret: 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
+    refreshToken: 1//067fh04kCuXzyCgYIARAAGAYSNwF-L9IrSuwYOosmCJyRrA7Cv0n4zDuOahzkizhEx6aKvt4t0sA68e0iPBajZKnTtv-1G8__ewM
+    developerToken: ePLxxVDimuVE0InP1pns5A
+    loginCustomerId: 2035328305
+    customerId: 8515935823
